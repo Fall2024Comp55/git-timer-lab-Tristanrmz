@@ -42,13 +42,13 @@ public class BallLauncher extends GraphicsProgram{
 	
 	public void mousePressed(MouseEvent e) {
 		//// check if ball x is less than 100
-		/*
+		
 		for (GOval ball : balls) {
             if (ball.getX() < 100) {
                 return; 
             }
         }
-        */
+        
 		GOval ball = makeBall(SIZE/2, e.getY());
 		add(ball);
 	}
