@@ -12,7 +12,7 @@ public class MyFirstTimer extends GraphicsProgram implements ActionListener {
 	private Timer firstTimer;
 	private int numTimes;
 	
-	
+	//program shows how timer works
 	@Override
 	public void actionPerformed(ActionEvent e) {
 		myLabel.move(5, 0);
