@@ -44,20 +44,19 @@ public class DodgeBall extends GraphicsProgram implements ActionListener {
 		addMouseListeners();
 	}
 	
-	/*
+	
 	public void moveAllEnemiesOnce() {
 		int randomYMovement = rgen.nextInt(-SPEED, SPEED); 
 		for(GRect enemie:enemies) {
 			enemie.move(0, randomYMovement);
 		}
 	}
-	*/
 	
 	public void actionPerformed(ActionEvent e) {
 		if(numTimes % 40 == 0) {
 		    addAnEnemy();
 		}
-		//moveAllEnemiesOnce();
+		moveAllEnemiesOnce();
 		numTimes ++;
 		moveAllBallsOnce();
 	
