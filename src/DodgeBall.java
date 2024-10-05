@@ -44,20 +44,20 @@ public class DodgeBall extends GraphicsProgram implements ActionListener {
 		addMouseListeners();
 	}
 	
+	/*
 	public void moveAllEnemiesOnce() {
 		int randomYMovement = rgen.nextInt(-SPEED, SPEED); 
 		for(GRect enemie:enemies) {
 			enemie.move(0, randomYMovement);
 		}
 	}
-	
-	
+	*/
 	
 	public void actionPerformed(ActionEvent e) {
 		if(numTimes % 40 == 0) {
 		    addAnEnemy();
 		}
-		moveAllEnemiesOnce();
+		//moveAllEnemiesOnce();
 		numTimes ++;
 		moveAllBallsOnce();
 	
@@ -106,12 +106,14 @@ public class DodgeBall extends GraphicsProgram implements ActionListener {
 	private void moveAllBallsOnce() {
 		for(GOval ball:balls) {
 			ball.move(SPEED, 0);
+			/*
 			// allows us to delete enemy when it touches the ball.
 			GObject enemy = getElementAt(ball.getX() + SIZE / 2, ball.getY());
 	        if (enemy instanceof GRect) {
 	            remove(enemy); 
 	            enemies.remove(enemy); 
 	        }
+	        */
 		}
 	}
 	
